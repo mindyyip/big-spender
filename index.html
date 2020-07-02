@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <!-- bootstrap css -->
+    <link rel='stylesheet' href='./css/bootstrap.min.css'>
+    <!-- main css -->
+    <link rel='stylesheet' href='./css/style.css'>
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <!-- font awesome -->
+    <link rel='stylesheet' href='./css/all.css'>
+
+    <title>Money Watcher</title>
+  </head>
+
+  <body>
+    <div class='container-fluid'>
+      <!--title and button -->
+      <div class='row'>
+        <div class='col-8'>
+          <h1 id='title'>BIG SPENDER</h1>
+        </div>
+        <div class='col-4' id='choose-form'>
+          <button class='choose' id='money-button' type='button' name='Expenses'>Money Tracking</button>
+          <button class='choose' id='budget-button' type='button' name='Budget'>Budget Tracking</button>
+        </div>
+
+      </div>
+      <!-- icons row -->
+      <div class='jumbotron jumbotron-fluid' id='overview-icons'>
+        <div class='container-fluid'>
+          <div class='row'>
+            <div class='col-4 text-center' id='start-square'>
+              <h3 class='h3-text' id='start-h3'>Budget</h3>
+              <h2 class='text-align' id='start'><span>$ </span><span id='start-amount'> 0</span></h2>
+
+            </div>
+
+            <div class='col-4 text-center' id='income-square'>
+              <h3 class='h3-text' id='add-h3'>Income</h3>
+              <h2 class='text-align' id='income'><span>$ </span><span id='income-amount'> 0</span></h2>
+
+            </div>
+
+            <div class='col-4 text-center' id='expense-square'>
+              <h3 class='h3-text' >Expenses</h3>
+              <h2 class='text-align' id='expenses'><span>$ </span><span id='expense-amount'> 0</span></h2>
+
+            </div>
+
+            <div class='col-4 text-center' id='balance-square'>
+              <h3 class='h3-text'>Balance</h3>
+              <h2 class='text-align' id='balance'><span>$ </span><span id='balance-amount'> 0</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class='row' id='form-table'>
+        <!--start forms -->
+        <div class='col-5'>
+          <div class='error alert alert-danger text-capitalize'>
+            Value cannot be empty or negative
+          </div>
+          <form class ='input-form' id='start-form' action='index.html' method='post'>
+            <h5 id='start-text'>Please Enter Your Budget</h5>
+            <input type='number' name='start' id='start-input'>
+            <br>
+            <button type='submit' name='start-submit' class='submit' id='start-submit'>Submit</button>
+          </form>
+          <!--savings forms -->
+          <form class ='input-form' id='income-form' action='index.html' method='post'>
+            <h5 id='income-text'>Please Enter Income Description</h5>
+            <input type='text' name='income-name' id='income-name-input'>
+            <h5 id='income-amount-text'>Please Enter Income Amount</h5>
+            <input type='number' name='income-number' id='income-number-input'>
+            <br>
+            <button type='submit' name='income-submit' class='submit' id='income-submit'>Submit</button>
+          </form>
+          <!--expense forms -->
+          <form class ='input-form' id='expense-form' action='index.html' method='post'>
+            <h5 id='expense-text'>Please Enter The Expense Description</h5>
+            <input type='text' name='expense-name' id='expense-name-input'>
+            <h5 id='expense-amount-text'>Please Enter The Expense Amount</h5>
+            <input type='number' name='expense-number' id='expense-number-input'>
+            <br>
+            <button type='submit' name='expense-submit' class='submit' id='expense-submit'>Submit</button>
+          </form>
+
+        </div>
+        <!--data table -->
+        <!-- add in an edit and delete button-->
+        <div class='col-7'>
+          <button type='button' name='export' id='export-button'>Export Excel Sheet</button>
+          <button type='button' name='Reset' id='reset-button'>Reset</button>
+          <!--have for pop up when pressed maybe -->
+          <form action='/action_page.php' class='file-input'>
+            <input type='file' id='myFile' name='filename'>
+            <input type='submit'>
+          </form>
+          <table id='data' border='1'>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Balance</th>
+            </tr>
+
+          </table>
+        </div>
+    </div>
+
+     <!-- jquery -->
+     <script src='./js/jquery-3.3.1.min.js'></script>
+     <!-- bootstrap js -->
+     <script src='./js/bootstrap.bundle.min.js'></script>
+     <!-- script js -->
+     <script src='./js/app.js'></script>
+    <footer>
+      <h5 class='text-center'><b>Big Spender by <a href='https://github.com/mindyyip'>Mindy Yip</a></b></h5>
+      <h5 class='text-center'><b>View on <a href='https://github.com/mindyyip/expenses-project'>GitHub</a></b></h5>
+    </footer>
+  </body>
+</html>

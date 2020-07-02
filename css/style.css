@@ -1,0 +1,109 @@
+body {
+  background: url(../img/cool-background.png)
+   no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#title {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-family: 'arial black';
+  font-size: 50px;
+}
+#choose-form {
+  padding-top: 20px;
+}
+.choose {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  color: white;
+  background-color: #4EC039;
+  height: 40px;
+}
+.choose:hover {
+  background-color: #409830;
+}
+.alert {
+  display: none;
+}
+.h3-text{
+  font-size: 32px;
+}
+#overview-icons {
+  margin-top: 40px;
+  border: 2px solid;
+  border-radius: 10px;
+  background: rgba(193, 192, 193, 0.4);
+  padding: 25px;
+}
+
+#start-square {
+  color: #286DBA;
+}
+#income-square {
+  color: green;
+  display: none;
+}
+#expense-square {
+  color: red;
+}
+#balance-square {
+  color: black
+}
+.file-input {
+  float: right;
+  background-color: #DBDCE1;
+  display: none;
+}
+.input-form {
+  border-radius:10px;
+  padding: 10px;
+  margin: 20px 5px;
+  background-color: #DBDCE1;
+  background: rgba(193, 192, 193, 0.5);
+  /*background-color: #DADEEF; */
+}
+#form-table {
+  margin-top: 15px;
+}
+#start-form {
+  margin-top: 10px;
+  border: 2px solid #286DBA;
+}
+#income-form {
+    border: 2px solid green;
+    display: none;
+}
+#expense-form {
+    border: 2px solid red;
+}
+
+.submit {
+  margin-top: 15px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+table, th, td {
+  text-align: left;
+  font-size: 20px;
+  border: 2px solid black;
+  padding: 5px;
+
+}
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+tr:hover {background-color: #ddd;}
+footer {
+  padding-top: 100px;
+}
